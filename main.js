@@ -1,2 +1,4 @@
 alert('wassup')
-$('h1').text('Hi')
+$(document).ready(function(){
+	$('h1').text('Hi')
+})
