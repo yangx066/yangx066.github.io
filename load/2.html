@@ -3,22 +3,35 @@
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 	<title>2</title>
-	<style>
-	h1 {
-		font-family: 'Pacifico', cursive;
-	}
-	</style>
+
 </head>
+
 <body>
 <center>
 <h1>Get healthy together!</h1>
-<div><img src="https://media.giphy.com/media/Ls1Diuj2A61uE/giphy.gif" height="400px"><img src="https://media.giphy.com/media/gCANwADwdazG8/giphy.gif" height="400px"></div>
-
+<div><img src="https://media.giphy.com/media/Ls1Diuj2A61uE/giphy.gif" height="400px"><img src="https://media.giphy.com/media/gCANwADwdazG8/giphy.gif" height="400px">
+<h2 id=text>Please have fun.</h1>
+<button onclick=generate()>See more</button>
+</div>
 </center>
-<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js">
-</script>
-<script>
 
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+<script src="tracery.js"></script>
+<script>
+var grammarObj = {
+	"S": ["#Sport# at the same time #place1# and #place2#".],
+	"Sport": ["Play baseball","Run","Swim","Rope skipping","Play squash","Dance"],
+	"place1": ["in a baseball field","in a restaurant","in a bar","in the gym","in a park","on the beach"],
+	"place2": ["in a farm","on the road","in the kitchen","in a store","in a friend's living room"],
+}
+
+var grammar = tracery.createGrammar(grammarObj)
+
+function generate(){
+	var t = grammar.flatten("#S#");
+	$('h2').text(t);
+}
 </script>
 </body>
+
 </html>
