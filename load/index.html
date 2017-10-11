@@ -35,10 +35,16 @@
 </script>
 
 <script>
+var num=[1,2,3,4,5];
+console.log(num[0]);
+function getRandomArbitrary(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
 $(document).ready(function(){
 
 	$("#b1").click(function(){
-  $("div").load('https://yangx066.github.io/load/'+Math.random()*4+1'');
+  $("div").load("https://yangx066.github.io/load/" + num[getRandomArbitrary(0, 4)]);
 });
 
 })
