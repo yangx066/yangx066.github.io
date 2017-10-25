@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Interactive website</title>
+</head>
+
+<script>
+
+	function handle(e){
+        if(e.keyCode === 13){
+             document.getElementById('go_button').click();
+        }
+    }
+
+	function change_text(){
+		var input_text = document.getElementById("input_text").value;
+		var html = '<div id="placeholder"></div>';
+		var width = document.getElementById("gif").offsetWidth / input_text.length;
+		if ( width>300 ){
+			width = 300;
+		}
+		var height = width * 1000 / 737;
+		for (i = 0;i<input_text.length;i++){
+			if (input_text[i]>="A" && input_text[i]<="Z"){
+				html += '<img id="gifs" style="width:'+width+'px; height:'+height+'px;" src="gif/'+input_text[i]+'.gif">';
+			}else if (input_text[i]>="a" && input_text[i]<="z"){
+				html += '<img id="gifs" style="width:'+width+'px; height:'+height+'px;" src="gif/'+input_text[i]+'.gif">';
+			}else if (input_text[i] == " ") {
+				html += '<img id="gifs" style="width:'+width+'px; height:'+height+'px;" src="gif/space.gif">';
+
+			}else{
+				alert("Only characters among a-z or A-Z!");
+				break;
+			}
+		}
+		document.getElementById("gif").innerHTML = html;
+	}
+</script>
+
+
+    <body>
+
+    <center>
+    	<div id="begin"> <img id="begin1" src="gif/beginning.gif"> </div>
+
+
+
+    <div id="all">
+	<div id="gif"></div>
+	<input class="form_elt" style="width:250px" type="text" id="input_text" maxlength="80" placeholder="Type your name here" onkeypress="handle(event)">
+    <button id="go_button" onclick ="change_text()">GO</button>
+
+    <div id="pAll" >
+    <div id="p1" ><img src="gif/p1.gif" width="100pt" ></div>
+    <div id="p2" ><img src="gif/p2.gif" width="120pt" ></div>
+    <div id="p3" ><img src="gif/p3.gif" width="90pt" ></div>
+    <div id="p4" ><img src="gif/p4.gif" width="140pt" ></div>
+    <div id="p5" ><img src="gif/p5.gif" width="100pt" ></div>
+    <div id="p6" ><img src="gif/p3.gif" width="80pt" ></div>
+    </div>
+
+    </div>
+
+    <!-- <div id="bg" ><img id="bg1" src="image/background.png"></div> -->
+
+</center>
+	<a id="a1" href="http://cargocollective.com/yangxj/Dynamic-Font-Design"><p id="v"  target="_blank">View all Emoters</p></a>
+
+</div>
+	
+	<div id="artist" >
+	<div id="text" ><a id="a2" href="http://cargocollective.com/yangxj">ARTEST</a></div>
+</div>
+
+<audio controls="controls" autoplay="autoplay">
+  <source src="audio/DISKPREPT4 - Aphex Twin.mp3" type="audio/mpeg" />
+Your browser does not support the audio element.
+</audio>
+
+<style type="text/css">
+
+	body{
+     background-image:url(image/background.png);
+     background-repeat:no-repeat;
+     background-size: cover;
+
+}
+
+audio{
+  position: absolute;
+  top: 10pt;
+  left: 10pt;
+
+}
+
+
+@keyframes begi
+{
+from {z-index: 100;}
+to {z-index: -1;}
+}
+ div#begin{
+  animation: begi 10s;
+  position: absolute;
+  top: 0pt;
+  left: 0pt;
+  width: 100%;
+  height: 100vh;
+}  
+
+#begin1{
+  width: 100%
+}
+
+div#all{
+	position: relative;
+	top: 0pt;
+}
+
+
+div#gif{
+	top: 100pt;
+	margin-right: 80pt;
+	margin-left: 80pt;
+	margin-top:135pt;
+	margin-bottom: 70pt;
+	height: 300pt;
+	width:auto;
+}
+
+#dumy {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+#gifs{
+	display: inline-block;
+    vertical-align: middle;
+	margin:auto 0 auto 0;
+}
+
+#input_text {
+	border: 0.1em solid darken(#eee, 6%);
+    padding: 1em;
+    margin: 0.6em 0;
+    
+	outline:none;
+	-webkit-border-radius:8px;
+    
+    &:focus {
+      outline: none;
+      border: 0.1em solid darken(#ccc, 6%);
+    }
+}
+
+
+
+
+button {
+    background: #B3B3B3;
+    color: #fff;
+    outline: none;
+    text-transform: uppercase;
+	-webkit-border-radius:8px;
+    padding: 1.2em;
+    overflow: hidden;
+    border: none;
+    letter-spacing: 0.1em;
+    margin: 0.5em 0;
+    font-weight: bold; 
+}
+
+button:hover{
+	background: #FFE3E3;
+
+}
+
+div#pAll{
+  position: absolute;
+  top: -125pt;
+}
+
+div#p1{
+  position: absolute;
+  top: 150pt;
+  left: 90pt;
+}
+div#p2{
+  position: absolute;
+  top: 490pt;
+  left: 740pt;
+}
+
+div#p3{
+  position: absolute;
+  top: 390pt;
+  left: 900pt;
+}
+
+div#p4{
+  position: absolute;
+  top: 380pt;
+  left: 180pt;
+}
+
+div#p5{
+  position: absolute;
+  top: 70pt;
+  left: 680pt;
+}
+div#p6{
+  position: absolute;
+  top: 15pt;
+  left: 290pt;
+}
+
+
+#v{
+  position: absolute;
+  top: 510pt;
+  right: 35pt;
+}
+
+#a1{
+  text-decoration: none;
+  color: #B3B3B3;
+}
+#v:hover{
+  color:#FFE3E3;
+}
+
+div#artist{
+  background: #B3B3B3;
+  border-radius: 50%;
+  width: 50pt;
+  height: 50pt; 
+  position: absolute;
+  top: 20pt;
+  right: 35pt;
+}
+
+div#artist:hover{
+  background: #FFE3E3;
+}
+
+div#text{
+  position: absolute;
+  top: 20pt;
+  left: 4pt;
+
+}
+
+#a2{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+</style>
+
+
+</body>
+
+</html>
