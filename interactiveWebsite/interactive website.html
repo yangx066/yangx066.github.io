@@ -22,7 +22,8 @@
 		var height = width * 1000 / 737;
 		for (i = 0;i<input_text.length;i++){
 			if (input_text[i]>="A" && input_text[i]<="Z"){
-				html += '<img id="gifs" style="width:'+width+'px; height:'+height+'px;" src="gif/'+input_text[i]+'.gif">';
+
+        html += '<img id="gifs" style="width:'+width+'px; height:'+height+'px;" src="gif/'+input_text[i]+'.gif">';
 			}else if (input_text[i]>="a" && input_text[i]<="z"){
 				html += '<img id="gifs" style="width:'+width+'px; height:'+height+'px;" src="gif/'+input_text[i]+'.gif">';
 			}else if (input_text[i] == " ") {
@@ -61,7 +62,7 @@
 
     </div>
 
-    <!-- <div id="bg" ><img id="bg1" src="image/background.png"></div> -->
+    
 
 </center>
 	<a id="a1" href="http://cargocollective.com/yangxj/Dynamic-Font-Design"><p id="v"  target="_blank">View all Emoters</p></a>
@@ -128,7 +129,7 @@ div#gif{
 	width:auto;
 }
 
-#dumy {
+#placeholder {
     display: inline-block;
     vertical-align: middle;
     height: 100%;
