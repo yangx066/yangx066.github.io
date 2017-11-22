@@ -1,61 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>random mission</title>
-</head>
-<body>
-	<center>
-	<h1 id='click'>CLICK THE BUTTON TO GET A MISSION</h1>
-	<h3>(Complete one mission each day, and keep doing it for 3 days!)</h3>
-	<div>
-		<h1 id="mission1">The mission will shows here</h1>
-	</div>
-		<button type="button">Click me</button>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>search</title>
+    </head>
+
+
+    <center>
+    <body>
+    	<div id = "title">TYPE IN THE LATITUDE AND LONGITUDE</div>
+    	<div id = "subtitle">It will show on the map!
+    	<br>
+    	<br></div>
+        <div id ="Latitude">Latitude
+            <input type="number" id="currentLat">
+        </div>
+
+        <div id ="Longitude">Longitude
+            <input type="number" id="currentLng">
+        </div>
+
+        <input type="submit" id="submit" value="go">
+
+        <div id="map"> </div>
+
+
+    </body>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+        <script src="js/search.js"></script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9QMSK_bCc4OY74M8Wf9clEosPCx37FRA&callback=initMap"
+        async defer> </script>
+
     
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script>
-		var mis=['Send a picture of you two and recall the memory you two shared', 'Sing a love song and send it to him/her', 'Draw a portrait of him/her and send', 'Invite him/her to do something together, such as play a cooperative game', 'Send a funny selfie of yourself to him/her and make him/her laugh', 'Send a gift to her/him and let her/him know', 'Remind him/her the first time you met with each other', 'Try contact her/him twice today', 'Morning call!', 'Talk about your dreams of your future life together', 'Send a postcard to him/her', 'Take photos or videos when you see something interesting and send to him/her'];
-
-		$(document).ready(function(){
-
-			$("#click").css("color","#F12974")
-    		$('button').click(function(){
-    			var rand=Math.floor(Math.random()*12)
-    			$("#mission1").text(mis[rand]);
-    			console.log(rand);
-    		});
-    	});
-
-
-	</script>
-	<style>
-		div{
-			margin-left: 200px;
-			margin-right: 200px;
-			margin-top: 100px;
-			margin-bottom:100px;
-			height: 100px;
-
-		}
-		button{
-			    background: #B3B3B3;
-    			color: #fff;
-    			outline: none;
-    			text-transform: uppercase;
-				-webkit-border-radius:8px;
-    			padding: 1.2em;
-    			overflow: hidden;
-    			border: none;
-    			letter-spacing: 0.1em;
-    			margin: 0.5em 0;
-    			font-weight: bold; 
-
-		}
-
-		button:hover{
-		background: #F12974;
-	</style>
-
-</center>
-</body>
+    </center>
 </html>
