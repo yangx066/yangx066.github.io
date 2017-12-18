@@ -1,0 +1,16 @@
+{
+  "name": "yangx066.github.io",
+  "description": "final",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
