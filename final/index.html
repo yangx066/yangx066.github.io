@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pet</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/addons/p5.dom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bungee|Lato:300|Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+</head>
+<body>
+
+
+<script>
+	$(document).ready(function(){
+	// create user's own animal
+		// hide pics
+		
+		$("#bunny_body").hide();
+		$("#croc_body").hide();
+		$("#koala_body").hide();
+		$("#seal_body").hide();
+		$("#sloth_body").hide();
+		$("#squirrel_body").hide();
+
+		$("#bunny_head").hide();
+		$("#croc_head").hide();
+		$("#koala_head").hide();
+		$("#seal_head").hide();
+		$("#sloth_head").hide();
+		$("#squirrel_head").hide();
+
+		$("#bunny_tail").hide();
+		$("#croc_tail").hide();
+		$("#koala_tail").hide();
+		$("#seal_tail").hide();
+		$("#sloth_tail").hide();
+		$("#squirrel_tail").hide();
+
+		$("#bunny_organ").hide();
+		$("#croc_organ").hide();
+		$("#koala_organ").hide();
+		$("#seal_organ").hide();
+		$("#sloth_organ").hide();
+		$("#squirrel_organ").hide();
+
+		$("#bunny_ear").hide();
+		$("#koala_ear").hide();
+		$("#squirrel_ear").hide();
+
+		// Q1-head
+		$("#b11").click(function(){
+  			$("#croc_head").show();
+  			$("#b12").fadeOut();
+  			$("#b13").fadeOut();
+  			$("#b14").fadeOut();
+  			$("#b15").fadeOut();
+  			$("#b16").fadeOut();
+		});
+
+		$("#b12").click(function(){
+  			$("#bunny_head").show();
+  			$("#b11").fadeOut();
+  			$("#b13").fadeOut();
+  			$("#b14").fadeOut();
+  			$("#b15").fadeOut();
+  			$("#b16").fadeOut();
+		});
+
+			$("#b13").click(function(){
+  			$("#koala_head").show();
+  			$("#b11").fadeOut();
+  			$("#b12").fadeOut();
+  			$("#b14").fadeOut();
+  			$("#b15").fadeOut();
+  			$("#b16").fadeOut();
+		});
+
+			$("#b14").click(function(){
+  			$("#sloth_head").show();
+  			$("#b11").fadeOut();
+  			$("#b12").fadeOut();
+  			$("#b13").fadeOut();
+  			$("#b15").fadeOut();
+  			$("#b16").fadeOut();
+		});
+
+			$("#b15").click(function(){
+  			$("#seal_head").show();
+  			$("#b11").fadeOut();
+  			$("#b12").fadeOut();
+  			$("#b13").fadeOut();
+  			$("#b14").fadeOut();
+  			$("#b16").fadeOut();
+		});
+
+			$("#b16").click(function(){
+  			$("#squirrel_head").show();
+  			$("#b11").fadeOut();
+  			$("#b12").fadeOut();
+  			$("#b13").fadeOut();
+  			$("#b14").fadeOut();
+  			$("#b15").fadeOut();
+		});
+
+		$("#reset1").click(function(){
+			$("#croc_head").hide();
+			$("#bunny_head").hide();
+			$("#koala_head").hide();
+			$("#seal_head").hide();
+			$("#sloth_head").hide();
+			$("#squirrel_head").hide();
+			$("#b11").fadeIn();
+			$("#b12").fadeIn();
+			$("#b13").fadeIn();
+			$("#b14").fadeIn();
+			$("#b15").fadeIn();
+			$("#b16").fadeIn();
+		});
+
+		// Q2-body
+			$("#b21").click(function(){
+  			$("#seal_body").show();
+  			$("#b22").fadeOut();
+  			$("#b23").fadeOut();
+  			$("#b24").fadeOut();
+  			$("#b25").fadeOut();
+  			$("#b26").fadeOut();
+		});
+
+		    $("#b22").click(function(){
+  			$("#croc_body").show();
+  			$("#b21").fadeOut();
+  			$("#b23").fadeOut();
+  			$("#b24").fadeOut();
+  			$("#b25").fadeOut();
+  			$("#b26").fadeOut();
+		});
+
+			$("#b23").click(function(){
+  			$("#bunny_body").show();
+  			$("#b21").fadeOut();
+  			$("#b22").fadeOut();
+  			$("#b24").fadeOut();
+  			$("#b25").fadeOut();
+  			$("#b26").fadeOut();
+		});
+
+			$("#b24").click(function(){
+  			$("#squirrel_body").show();
+  			$("#b21").fadeOut();
+  			$("#b22").fadeOut();
+  			$("#b23").fadeOut();
+  			$("#b25").fadeOut();
+  			$("#b26").fadeOut();
+		});
+
+			$("#b25").click(function(){
+  			$("#koala_body").show();
+  			$("#b21").fadeOut();
+  			$("#b22").fadeOut();
+  			$("#b23").fadeOut();
+  			$("#b24").fadeOut();
+  			$("#b26").fadeOut();
+		});
+
+			$("#b26").click(function(){
+  			$("#sloth_body").show();
+  			$("#b21").fadeOut();
+  			$("#b22").fadeOut();
+  			$("#b23").fadeOut();
+  			$("#b24").fadeOut();
+  			$("#b25").fadeOut();
+		});
+
+		$("#reset2").click(function(){
+			$("#croc_body").hide();
+			$("#bunny_body").hide();
+			$("#koala_body").hide();
+			$("#seal_body").hide();
+			$("#sloth_body").hide();
+			$("#squirrel_body").hide();
+			$("#b21").fadeIn();
+			$("#b22").fadeIn();
+			$("#b23").fadeIn();
+			$("#b24").fadeIn();
+			$("#b25").fadeIn();
+			$("#b26").fadeIn();
+		});
+
+		//Q3-tail
+			$("#b31").click(function(){
+  			$("#croc_tail").show();
+  			$("#b32").fadeOut();
+  			$("#b33").fadeOut();
+  			$("#b34").fadeOut();
+  			$("#b35").fadeOut();
+  			$("#b36").fadeOut();
+		});
+
+		    $("#b32").click(function(){
+  			$("#bunny_tail").show();
+  			$("#b31").fadeOut();
+  			$("#b33").fadeOut();
+  			$("#b34").fadeOut();
+  			$("#b35").fadeOut();
+  			$("#b36").fadeOut();
+		});
+
+			$("#b33").click(function(){
+  			$("#squirrel_tail").show();
+  			$("#b31").fadeOut();
+  			$("#b32").fadeOut();
+  			$("#b34").fadeOut();
+  			$("#b35").fadeOut();
+  			$("#b36").fadeOut();
+		});
+
+			$("#b34").click(function(){
+  			$("#sloth_tail").show();
+  			$("#b31").fadeOut();
+  			$("#b32").fadeOut();
+  			$("#b33").fadeOut();
+  			$("#b35").fadeOut();
+  			$("#b36").fadeOut();
+		});
+
+			$("#b35").click(function(){
+  			$("#seal_tail").show();
+  			$("#b31").fadeOut();
+  			$("#b32").fadeOut();
+  			$("#b33").fadeOut();
+  			$("#b34").fadeOut();
+  			$("#b36").fadeOut();
+		});
+
+			$("#b36").click(function(){
+  			$("#koala_tail").show();
+  			$("#b31").fadeOut();
+  			$("#b32").fadeOut();
+  			$("#b33").fadeOut();
+  			$("#b34").fadeOut();
+  			$("#b35").fadeOut();
+		});
+
+		$("#reset3").click(function(){
+			$("#croc_tail").hide();
+			$("#bunny_tail").hide();
+			$("#koala_tail").hide();
+			$("#seal_tail").hide();
+			$("#sloth_tail").hide();
+			$("#squirrel_tail").hide();
+			$("#b31").fadeIn();
+			$("#b32").fadeIn();
+			$("#b33").fadeIn();
+			$("#b34").fadeIn();
+			$("#b35").fadeIn();
+			$("#b36").fadeIn();
+		});
+
+		//Q4-organ
+			$("#b41").click(function(){
+  			$("#bunny_organ").show();
+  			$("#bunny_ear").show();
+  			$("#b42").fadeOut();
+  			$("#b43").fadeOut();
+  			$("#b44").fadeOut();
+  			$("#b45").fadeOut();
+  			$("#b46").fadeOut();
+		});
+
+		    $("#b42").click(function(){
+  			$("#croc_organ").show();
+  			$("#b41").fadeOut();
+  			$("#b43").fadeOut();
+  			$("#b44").fadeOut();
+  			$("#b45").fadeOut();
+  			$("#b46").fadeOut();
+		});
+
+			$("#b43").click(function(){
+  			$("#sloth_organ").show();
+  			$("#b41").fadeOut();
+  			$("#b42").fadeOut();
+  			$("#b44").fadeOut();
+  			$("#b45").fadeOut();
+  			$("#b46").fadeOut();
+		});
+
+			$("#b44").click(function(){
+  			$("#seal_organ").show();
+  			$("#b41").fadeOut();
+  			$("#b42").fadeOut();
+  			$("#b43").fadeOut();
+  			$("#b45").fadeOut();
+  			$("#b46").fadeOut();
+		});
+
+			$("#b45").click(function(){
+  			$("#koala_organ").show();
+  			$("#koala_ear").show();
+  			$("#b41").fadeOut();
+  			$("#b42").fadeOut();
+  			$("#b43").fadeOut();
+  			$("#b44").fadeOut();
+  			$("#b46").fadeOut();
+		});
+
+			$("#b46").click(function(){
+  			$("#squirrel_organ").show();
+  			$("#squirrel_ear").show();
+  			$("#b41").fadeOut();
+  			$("#b42").fadeOut();
+  			$("#b43").fadeOut();
+  			$("#b44").fadeOut();
+  			$("#b45").fadeOut();
+		});
+
+		$("#reset4").click(function(){
+			$("#croc_organ").hide();
+			$("#bunny_organ").hide();
+			$("#koala_organ").hide();
+			$("#seal_organ").hide();
+			$("#sloth_organ").hide();
+			$("#squirrel_organ").hide();
+			$("#squirrel_ear").hide();
+			$("#bunny_ear").hide();
+			$("#koala_ear").hide();
+			$("#b41").fadeIn();
+			$("#b42").fadeIn();
+			$("#b43").fadeIn();
+			$("#b44").fadeIn();
+			$("#b45").fadeIn();
+			$("#b46").fadeIn();
+		});
+
+		// homepage animal position and movement
+		$("#cat").css({"left" : -150, "top" : -50});
+		$("#puppy").css({"left" : -150, "top" : -100});
+		$("#pig").css({"left" : -50, "top" : 0});
+		$("#rabbit").css({"left" : -80, "top" : 0});
+		$("#bird").css({"left" : -50, "top" : 0});
+		$("#rat").css({"left" : 0, "top" : 0});
+		$("#leaves").css({"left" : -50, "top" : 3605});
+		$(window).mousemove(function(e) {
+  			$("#cat").css({"left" : e.pageX/10-150, "top" : e.pageY/10-50});
+		});
+		$(window).mousemove(function(e) {
+  			$("#puppy").css({"left" : e.pageX/10-150, "top" : e.pageY/10-100});
+		});
+		$(window).mousemove(function(e) {
+  			$("#pig").css({"left" : e.pageX/25-50, "top" : e.pageY/25});
+		});
+		$(window).mousemove(function(e) {
+  			$("#rabbit").css({"left" : e.pageX/25-80, "top" : e.pageY/25});
+		});
+		$(window).mousemove(function(e) {
+  			$("#bird").css({"left" : e.pageX/25-50, "top" : e.pageY/25});
+		});
+		$(window).mousemove(function(e) {
+  			$("#rat").css({"left" : e.pageX/25, "top" : e.pageY/25});
+		});
+		$(window).mousemove(function(e) {
+  			$("#leaves").css({"left" : e.pageX/25-50, "top" : e.pageY/25+3605});
+		});
+		// page scroll down
+		$(function(){
+    		$('#down').click(function(){    
+        		$("html,body").animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);
+    		});
+    		$('#down2').click(function(){    
+        		$("html,body").animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);
+    		});
+    		$('#down3').click(function(){    
+        		$("html,body").animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);
+    		});
+    		$('#down4').click(function(){    
+        		$("html,body").animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);
+    		});
+    		$('#down5').click(function(){    
+        		$("html,body").animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);
+    		});
+		});
+
+		$("#clickhere").click(function(){
+			$("#ready").fadeOut(1000);
+		});
+
+
+	});
+
+
+
+</script>
+
+
+<style type="text/css">
+	#mute{
+		position: fixed;
+		top: 10px;
+		left: 10px;
+		border:0;
+		background-color: black;
+		color: white;
+	}
+	#unmute{
+		position: fixed;
+		top: 10px;
+		left: 60px;
+		border:0;
+		background-color: black;
+		color: white;
+	}
+</style>
+    <button id="mute" onclick="pauseAud()" type="button">Mute</button>
+    <button id="unmute" onclick="playAud()" type="button">Unmute</button>
+	<audio id="audio1" autoplay="autoplay" loop="loop">
+		<source src="assets/jungle.wav" type="audio/ogg" />
+	</audio>
+<script type="text/javascript">
+	var myAudio=document.getElementById("audio1");
+
+	function playAud(){
+  		myAudio.play();
+  	}
+
+	function pauseAud(){
+  		myAudio.pause();
+  	}
+</script>
+
+
+	<div id="bg"><img src="assets/bg.png" /></div>
+	<p id="title">ANIMAL REMIX</p>
+	<div id="para">There's a reason why so many people ponder the question, "What kind of animal am I?" You've probably wondered yourself. Animals have unique habits that make them possible to be classified. Those characteristics can be used to describe traits of human beings. Well, basically, we are all animals with humanity. 
+	<br>
+	<br>
+	So, how can you determine your inner animal? The Animal Remix fuses ancient traditions with modern psychological and biological concepts and its four question personality quiz has almost 24 possible animal results.
+	<br>
+	<br> 
+    </div>
+
+    <div id="free">
+    And best of all... it's free!
+    </div>
+	<div id="animals1">
+		<img id="cat" src="assets/cat.png" />
+		<img id="puppy" src="assets/puppy.png" />
+	</div>
+	<div id="animals2">
+		<img id="bird" src="assets/bird.png" />
+		<img id="pig" src="assets/pig.png" />
+		<img id="rat" src="assets/rat.png" />
+		<img id="rabbit" src="assets/rabbit.png" />
+	</div>
+	<center><div id="downdiv"><a id="down" href="#quiz"><img src="assets/down.png"></a></div></center>
+	<center><div id="downdiv2"><a id="down2" href="#quiz2"><img src="assets/down.png"></a></div></center>
+	<center><div id="downdiv3"><a id="down3" href="#quiz3"><img src="assets/down.png"></a></div></center>
+	<center><div id="downdiv4"><a id="down4" href="#quiz4"><img src="assets/down.png"></a></div></center>
+	<center><div id="downdiv5"><a id="down5" href="#finished"><img src="assets/down.png"></a></div></center>
+
+
+	<div id="quiz"></div>
+	<div id="quiz2"></div>
+	<div id="quiz3"></div>
+	<div id="quiz4"></div>
+	<div id="finished"></div>
+
+
+	<center>
+	<div><p id="q1">1. When dealing with a difficult problem, what would you most likely to do? </p></div>
+
+	<div><button id="b11" type="button">Directly face the problem and cover it aggressively</button></div>
+	<div><button id="b12" type="button">Go around and find a collateral solution</button></div>
+	<div><button id="b13" type="button">Pretend that there is no problem at all</button></div>
+	<div><button id="b14" type="button">Procrastinate and see if the problem still remains</button></div>
+	<div><button id="b15" type="button">Dig it up and find out the true reason</button></div>
+	<div><button id="b16" type="button">Back up and ask for help</button></div>
+	<div><button id="reset1" type="button">Reset !</button></div>
+
+	<div><p id="q2">2. What kind of sports do you like most? </p></div>
+
+	<div><button id="b21" type="button">Swimming</button></div>
+	<div><button id="b22" type="button">Football</button></div>
+	<div><button id="b23" type="button">Running</button></div>
+	<div><button id="b24" type="button">Basketball</button></div>
+	<div><button id="b25" type="button">Chess</button></div>
+	<div><button id="b26" type="button">I don't like sports at all</button></div>
+	<div><button id="reset2" type="button">Reset !</button></div>
+
+
+	<div><p id="q3">3. What type of music do you like most?</p></div>
+
+	<div><button id="b31" type="button">Metal</button></div>
+	<div><button id="b32" type="button">Rap</button></div>
+	<div><button id="b33" type="button">Pop</button></div>
+	<div><button id="b34" type="button">Smooth</button></div>
+	<div><button id="b35" type="button">Jazz</button></div>
+	<div><button id="b36" type="button">Country</button></div>
+	<div><button id="reset3" type="button">Reset !</button></div>
+
+
+	<div><p id="q4">4. What type of movie do you like most?</p></div>
+
+	<div><button id="b41" type="button">Action</button></div>
+	<div><button id="b42" type="button">Horror</button></div>
+	<div><button id="b43" type="button">Drama</button></div>
+	<div><button id="b44" type="button">Document</button></div>
+	<div><button id="b45" type="button">Comedy</button></div>
+	<div><button id="b46" type="button">Romance</button></div>
+	<div><button id="reset4" type="button">Reset !</button></div>
+	</center>
+
+
+	<div><img id="seal_organ" src="assets/animals/seal_organ.png" /></div>
+	<div><img id="croc_organ" src="assets/animals/croc_organ.png" /></div>
+	<div><img id="bunny_organ" src="assets/animals/bunny_organ.png" /></div>
+	<div><img id="squirrel_organ" src="assets/animals/squirrel_organ.png" /></div>
+	<div><img id="koala_organ" src="assets/animals/koala_organ.png" /></div>
+	<div><img id="sloth_organ" src="assets/animals/sloth_organ.png" /></div>
+
+	<div><img id="bunny_ear" src="assets/animals/bunny_ear.png" /></div>
+	<div><img id="squirrel_ear" src="assets/animals/squirrel_ear.png" /></div>
+	<div><img id="koala_ear" src="assets/animals/koala_ear.png" /></div>
+
+	<div><img id="seal_head" src="assets/animals/seal_head.png" /></div>
+	<div><img id="croc_head" src="assets/animals/croc_head.png" /></div>
+	<div><img id="bunny_head" src="assets/animals/bunny_head.png" /></div>
+	<div><img id="squirrel_head" src="assets/animals/squirrel_head.png" /></div>
+	<div><img id="koala_head" src="assets/animals/koala_head.png" /></div>
+	<div><img id="sloth_head" src="assets/animals/sloth_head.png" /></div>
+
+	<div><img id="seal_body" src="assets/animals/seal_body.png" /></div>
+	<div><img id="croc_body" src="assets/animals/croc_body.png" /></div>
+	<div><img id="bunny_body" src="assets/animals/bunny_body.png" /></div>
+	<div><img id="squirrel_body" src="assets/animals/squirrel_body.png" /></div>
+	<div><img id="koala_body" src="assets/animals/koala_body.png" /></div>
+	<div><img id="sloth_body" src="assets/animals/sloth_body.png" /></div>
+
+	<div><img id="seal_tail" src="assets/animals/seal_tail.png" /></div>
+	<div><img id="croc_tail" src="assets/animals/croc_tail.png" /></div>
+	<div><img id="bunny_tail" src="assets/animals/bunny_tail.png" /></div>
+	<div><img id="squirrel_tail" src="assets/animals/squirrel_tail.png" /></div>
+	<div><img id="koala_tail" src="assets/animals/koala_tail.png" /></div>
+	<div><img id="sloth_tail" src="assets/animals/sloth_tail.png" /></div>
+
+	<div id="remixed">This is your remixed animal!</div>
+	<div id="ready">
+		<p id="readyp">Ready to see your remixed animal?</p>
+		<button id="clickhere">click here</button>
+	</div>
+
+	<div id="leaves"><img src="assets/leaves.png" /></div>
+
+	<a href="file:///Users/yang/Desktop/jsfinal/index.html"><div id="playagain">
+		<button id="bplayagain">Play again !</button>
+	</div></a>
+
+	<style type="text/css">
+	    #playagain{
+	    	position: absolute;
+	    	top: 4470px;
+	    	left: 640px;
+	    	z-index: 190;
+	    }
+	    #bplayagain{
+	    	position: absolute;
+	    	height: 30px;
+	    	width: 150px;
+	    	font-weight: 300;
+			font-family: 'Quicksand', sans-serif;
+			font-size: 15px;
+			color:white;
+  			background-color:#b77d7d;
+  			border:2px;
+	    }
+	    #bplayagain:hover{
+	    	color:#b77d7d;
+  			background-color:white;
+  			border:2px solid #b77d7d;
+	    }
+	    #ready{
+	    	position: absolute;
+	    	top: 3770px;
+	    	left: 0px;
+	    	height: 800px;
+    		width: 1440px;
+    		background-color: white;
+	    	z-index:800;
+	    }
+	    #readyp{
+	    	position: absolute;
+	    	top: 50px;
+	    	left: 470px;
+	    	width: 600px;
+	    	font-size: 80px;
+			font-weight: 700;
+			font-family: 'Quicksand', sans-serif;
+			border: 0;
+	    }
+	    #clickhere{
+	    	position: absolute;
+	    	height: 60px;
+	    	width: 200px;
+	    	top: 480px;
+	    	left: 470px;
+	    	font-weight: 300;
+			font-family: 'Quicksand', sans-serif;
+			font-size: 30px;
+			color:white;
+  			background-color:black;
+  			border:0px;
+	    }
+		#remixed{
+			position: absolute;
+			top: 3850px;
+			left: 500px;
+			font-size: 30px;
+			font-weight: 700;
+			font-family: 'Quicksand', sans-serif;
+		}
+
+  		#bunny_ear{
+  			z-index: 80;
+  			position: absolute;
+  			top: 3785px;
+  		}
+  		#squirrel_ear{
+  			z-index: 79;
+  			position: absolute;
+  			top: 3785px;
+  		}
+  		#koala_ear{
+  			z-index: 78;
+  			position: absolute;
+  			top: 3785px;
+  		}
+
+  		#seal_tail{
+  			z-index: 70;
+  			position: absolute;
+  			top: 3785px;
+  		}
+  		#croc_tail{
+  			z-index: 69;
+  			position: absolute;
+  			top: 3785px;
+  		}
+   		#bunny_tail{
+  			z-index: 68;
+  			position: absolute;
+  			top: 3785px;
+  		}
+  		#squirrel_tail{
+  			z-index: 67;
+  			position: absolute;
+  			top: 3785px;
+  		}
+  		#koala_tail{
+  			z-index: 66;
+  			position: absolute;
+  			top: 3785px;
+  		}
+  		#sloth_tail{
+  			z-index: 65;
+  			position: absolute;
+  			top: 3785px;
+  		}
+
+  		#seal_body{
+  			z-index: 99;
+  			position: absolute;
+  			top: 3785px;
+  		}
+  		#croc_body{
+  			z-index: 98;
+  			position: absolute;
+  			top: 3785px;
+  		}
+   		#bunny_body{
+  			z-index: 97;
+  			position: absolute;
+  			top: 3785px;
+  		}
+  		#squirrel_body{
+  			z-index: 96;
+  			position: absolute;
+  			top: 3785px;
+  		}
+  		#koala_body{
+  			z-index: 95;
+  			position: absolute;
+  			top: 3785px;
+  		}
+  		#sloth_body{
+  			z-index: 94;
+  			position: absolute;
+  			top: 3785px;
+  		}
+  		#seal_head{
+  			z-index: 100;
+  			position: absolute;
+  			top: 3785px;
+  		}
+  		#croc_head{
+  			z-index:101;
+  			position: absolute;
+  			top: 3785px;
+  		}
+   		#bunny_head{
+  			z-index: 102;
+  			position: absolute;
+  			top: 3785px;
+  		}
+  		#squirrel_head{
+  			z-index: 103;
+  			position: absolute;
+  			top: 3785px;
+  		}
+  		#koala_head{
+  			z-index: 104;
+  			position: absolute;
+  			top: 3785px;
+  		}
+  		#sloth_head{
+  			z-index: 105;
+  			position: absolute;
+  			top: 3785px;
+  		}
+
+  		#seal_organ{
+  			z-index: 106;
+  			position: absolute;
+  			top: 3785px;
+  		}
+  		#croc_organ{
+  			z-index: 107;
+  			position: absolute;
+  			top: 3785px;
+  		}
+   		#bunny_organ{
+  			z-index: 108;
+  			position: absolute;
+  			top: 3785px;
+  		}
+  		#squirrel_organ{
+  			z-index: 109;
+  			position: absolute;
+  			top: 3785px;
+  		}
+  		#koala_organ{
+  			z-index: 110;
+  			position: absolute;
+  			top: 3785px;
+  		}
+  		#sloth_organ{
+  			z-index: 111;
+  			position: absolute;
+  			top: 3785px;
+  		}
+
+		#q1{
+			position: absolute;
+			top: 830px;
+			left: 10%;
+			right: 10%;
+			font-size: 25px;
+			font-weight: 700;
+			font-family: 'Quicksand', sans-serif;
+
+		}
+		#b11{
+			position: absolute;
+			top: 940px;
+			left: 520px;
+			width:400px;
+  			height: 50px;
+  			color:white;
+  			font-weight: 300;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b11:hover {
+    		background-color: white; /* Green */
+    		color: black;
+
+}
+  		#b12{
+			position: absolute;
+			top: 1000px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b12:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+  		#b13{
+			position: absolute;
+			top: 1060px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b13:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+  	  	#b14{
+			position: absolute;
+			top: 1120px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b14:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+  		#b15{
+			position: absolute;
+			top: 1180px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b15:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+  		#b16{
+			position: absolute;
+			top: 1240px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b16:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+  		#reset1{
+			position: absolute;
+			top: 1300px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:#4b4b4b;
+  			border:0px;
+  		}
+  		#reset1:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+
+
+		#q2{
+			position: absolute;
+			top: 1587px;
+			left: 10%;
+			right: 10%;
+			font-size: 25px;
+			font-weight: 700;
+			font-family: 'Quicksand', sans-serif;
+		}
+		#b21{
+			position: absolute;
+			top: 1697px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b21:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+  		#b22{
+			position: absolute;
+			top: 1757px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b22:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+  		#b23{
+			position: absolute;
+			top: 1817px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b23:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+  	  	#b24{
+			position: absolute;
+			top: 1877px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b24:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+  		#b25{
+			position: absolute;
+			top: 1937px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b25:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+  		#b26{
+			position: absolute;
+			top: 1997px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b26:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+  		#reset2{
+			position: absolute;
+			top: 2057px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:#4b4b4b;
+  			border:0px;
+  		}
+  		#reset2:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+		#q3{
+			position: absolute;
+			top: 2344px;
+			left: 10%;
+			right: 10%;
+			font-size: 25px;
+			font-weight: 700;
+			font-family: 'Quicksand', sans-serif;
+		}
+		#b31{
+			position: absolute;
+			top: 2454px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b31:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+    	#b32:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+    	#b33:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+    	#b34:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+    	#b35:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+    	#b36:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+    	#reset3:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+  		#b32{
+			position: absolute;
+			top: 2514px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b33{
+			position: absolute;
+			top: 2574px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  	  	#b34{
+			position:absolute;
+			top: 2634px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b35{
+			position: absolute;
+			top: 2694px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b36{
+			position: absolute;
+			top: 2754px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#reset3{
+			position: absolute;
+			top: 2814px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:#4b4b4b;
+  			border:0px;
+  		}
+
+		#q4{
+			position: absolute;
+			top: 3101px;
+			left: 10%;
+			right: 10%;
+			font-weight: 700;
+			font-size: 25px;
+			font-family: 'Quicksand', sans-serif;
+		}
+		#b41:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+    	#b42:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+    	#b43:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+    	#b44:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+    	#b45:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+    	#b46:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+    	#reset4:hover {
+    		background-color: white; /* Green */
+    		color: black;
+    	}
+		#b41{
+			position: absolute;
+			top: 3211px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b42{
+			position: absolute;
+			top: 3270px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b43{
+			position: absolute;
+			top: 3330px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  	  	#b44{
+			position: absolute;
+			top: 3390px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b45{
+			position: absolute;
+			top: 3450px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#b46{
+			position: absolute;
+			top: 3510px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:black;
+  			border:0px;
+  		}
+  		#reset4{
+			position: absolute;
+			top: 3570px;
+			left: 520px;
+  			width:400px;
+  			height: 50px;
+  			font-size: 14px;
+			font-family: 'Quicksand', sans-serif;
+  			color:white;
+  			background-color:#4b4b4b;
+  			border:0px;
+  		}
+		#bg{
+			position:absolute;
+  			left:0px;
+  			top:-15px;
+  			z-index:-20;
+		}
+		#title{
+			margin-top:160px;
+			font-size:300%;
+			margin-left: 500px;
+			width:600px;
+			font-family: 'Bungee', cursive;
+		}
+
+		#para{
+			color: white;
+			margin-top:30px;
+			margin-left:auto;
+			margin-right:auto;
+			width:400px;
+			font-family: 'Lato', sans-serif;
+		}
+		#free{
+			color: white;
+			margin-top:30px;
+			margin-left:auto;
+			margin-right:auto;
+			width:400px;
+			font-size: 150%;
+			font-family: 'Lato', sans-serif;
+			
+		}
+		#cat{
+			position:absolute;
+  			z-index:-1;
+		}
+		#puppy{
+			position:absolute;
+  			z-index:-1;
+		}
+		#rat{
+			position:absolute;
+  			z-index:-1;
+  		}
+  		#rabbit{
+			position:absolute;
+  			z-index:-1;
+  		}
+  		#bird{
+			position:absolute;
+  			z-index:-1;
+  		}
+  		#pig{
+			position:absolute;
+  			z-index:-1;
+  		}
+  		#downdiv{ 
+  			margin-top:100px;
+  			z-index:-5;
+  		}
+  		#downdiv2{ 
+  			margin-top:700px;
+  			z-index:-5;
+  		}
+  		#downdiv3{ 
+  			margin-top:720px;
+  			z-index:-5;
+  		}
+  		#downdiv4{ 
+  			margin-top:730px;
+  			z-index:-5;
+  		}
+  		#downdiv5{ 
+  			margin-top:720px;
+  			z-index:-5;
+  		}
+
+  		#quiz{
+  			position: absolute;
+  			top: 757px;
+  		}
+  		#quiz2{
+  			position: absolute;
+  			top: 1514px;
+  		}
+  		#quiz3{
+  			position: absolute;
+  			top: 2271px;
+  		}
+  		#quiz4{
+  			position: absolute;
+  			top: 3028px;
+  		}
+  		#finished{
+  			position: absolute;
+  			top: 3785px;
+  			z-index: -1;
+  		}
+  		#leaves{
+  			width: 1440px;
+  			height: 757px;
+  			position: absolute;
+  			top: 3785px;
+  			z-index: -30;
+  		}
+
+
+		}
+	</style>
+
+
+</body>
+</html>
